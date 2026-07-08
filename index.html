@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoodCredit | Assessoria em Financiamento Imobiliário | Correspondente Caixa</title>
+  <meta name="description" content="Financiamento imobiliário com orientação do início ao fim. Simulação gratuita, uso de FGTS e assessoria completa. Correspondente autorizado Caixa Aqui. Atendemos todo o Brasil.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GoodCredit | Assessoria em Financiamento Imobiliário">
+  <meta property="og:description" content="Financiamento imobiliário com orientação do início ao fim. Simulação gratuita e sem compromisso.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goodcredit.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="images/logo-goodcredit-horizontal.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- Logo -->
+      <a href="#" class="header__logo">
+        <img src="images/logo-goodcredit-horizontal.png" alt="GoodCredit Financiamentos Imobiliários" class="header__logo-img">
+      </a>
+      <!-- Desktop Nav -->
+      <nav class="header__nav" aria-label="Navegação principal">
+        <a href="#inicio" class="header__nav-link header__nav-link--active">Início</a>
+        <a href="#servicos" class="header__nav-link">Serviços</a>
+        <a href="#como-funciona" class="header__nav-link">Como Funciona</a>
+        <a href="#simulador" class="header__nav-link">Simulador</a>
+        <a href="#depoimentos" class="header__nav-link">Depoimentos</a>
+        <a href="#faq" class="header__nav-link">FAQ</a>
+      </nav>
+
+      <!-- Header CTA -->
+      <div class="header__cta">
+        <a href="#simulador" class="btn btn--primary btn--sm btn--pill">Simule Grátis</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="header__toggle" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="mobile-nav" aria-label="Navegação mobile">
+    <a href="#inicio" class="mobile-nav__link mobile-nav__link--active">Início</a>
+    <a href="#servicos" class="mobile-nav__link">Serviços</a>
+    <a href="#como-funciona" class="mobile-nav__link">Como Funciona</a>
+    <a href="#simulador" class="mobile-nav__link">Simulador</a>
+    <a href="#depoimentos" class="mobile-nav__link">Depoimentos</a>
+    <a href="#faq" class="mobile-nav__link">FAQ</a>
+    <div class="mobile-nav__cta">
+      <a href="#simulador" class="btn btn--primary btn--block btn--pill">Simular Financiamento</a>
+      <a href="#" onclick="openWhatsApp(); return false;" class="btn btn--whatsapp btn--block btn--pill">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar com Especialista
+      </a>
+    </div>
+  </nav>
+  <main id="main">
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg-pattern"></div>
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content animate-on-scroll">
+            <div class="hero__badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Correspondente Autorizado Caixa Aqui
+            </div>
+            <h1 class="hero__title">
+              Financiamento imobiliário com <span class="hero__title-highlight">orientação</span> do início ao fim
+            </h1>
+            <p class="hero__subtitle">
+              A GoodCredit ajuda você a simular, organizar documentos e conduzir seu financiamento com mais clareza, segurança e acompanhamento especializado.
+            </p>
+            <div class="btn-group">
+              <a href="#simulador" class="btn btn--primary btn--lg btn--pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><line x1="6" y1="12" x2="6.01" y2="12"/><line x1="18" y1="12" x2="18.01" y2="12"/></svg>
+                Simular meu financiamento
+              </a>
+              <a href="#" onclick="openWhatsApp(); return false;" class="btn btn--secondary btn--lg btn--pill" style="border-color: rgba(255,255,255,0.3); color: #fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Falar com especialista
+              </a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div style="width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(16,185,129,0.05)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1);">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <!-- Floating cards -->
+            <div class="hero__float-card hero__float-card--top">
+              <div class="hero__float-icon hero__float-icon--green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="hero__float-text">
+                <div class="hero__float-label">Análise de Crédito</div>
+                <div class="hero__float-value">Análise inicial rápida</div>
+              </div>
+            </div>
+            <div class="hero__float-card hero__float-card--bottom">
+              <div class="hero__float-icon hero__float-icon--blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <div class="hero__float-text">
+                <div class="hero__float-label">Condições e Taxas</div>
+                <div class="hero__float-value">Conforme banco e perfil</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CREDIBILITY BAR
+         ============================================================ -->
+    <section class="credibility" id="credibilidade">
+      <div class="container">
+        <div class="credibility__grid animate-stagger">
+          <div class="credibility__item">
+            <div class="credibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <div class="credibility__number" data-counter="500" data-prefix="+" data-suffix="">0</div>
+              <div class="credibility__label">Famílias Atendidas</div>
+            </div>
+          </div>
+          <div class="credibility__item">
+            <div class="credibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="credibility__number" data-counter="5" data-prefix="+" data-suffix=" anos">0</div>
+              <div class="credibility__label">De Experiência</div>
+            </div>
+          </div>
+          <div class="credibility__item">
+            <div class="credibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="credibility__number">Caixa Aqui</div>
+              <div class="credibility__label">Correspondente Autorizado</div>
+            </div>
+          </div>
+          <div class="credibility__item">
+            <div class="credibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div>
+              <div class="credibility__number">Todo Brasil</div>
+              <div class="credibility__label">Atendimento Nacional</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SERVICES SECTION
+         ============================================================ -->
+    <section class="section section--alt" id="servicos">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Nossas Soluções
+          </span>
+          <h2 class="section__title">Tudo o que você precisa em financiamento imobiliário</h2>
+          <p class="section__subtitle">Oferecemos assessoria especializada e suporte consultivo completo para garantir o melhor caminho na compra do seu imóvel.</p>
+        </div>
+        <div class="grid grid--3 animate-stagger" style="margin-top: var(--space-8);">
+          <!-- Card 1 -->
+          <div class="card" style="padding: var(--space-6);">
+            <div class="card__icon" style="margin-bottom: var(--space-4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Financiamento Imobiliário</h3>
+            <p class="card__text" style="font-size: var(--text-sm); line-height: 1.5;">Conduzimos todo o processo de financiamento para imóveis novos ou usados, estruturando a melhor operação de crédito de acordo com seu perfil familiar.</p>
+            <a href="#simulador" class="card__link" style="margin-top: var(--space-4);">
+              Simular agora
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <!-- Card 2 -->
+          <div class="card" style="padding: var(--space-6);">
+            <div class="card__icon" style="margin-bottom: var(--space-4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Uso de FGTS</h3>
+            <p class="card__text" style="font-size: var(--text-sm); line-height: 1.5;">Análise de viabilidade e orientação completa para utilização do seu saldo de FGTS como entrada ou amortização do saldo devedor do financiamento.</p>
+            <a href="#" onclick="openWhatsApp('Olá! Gostaria de saber como posso usar meu FGTS no financiamento imobiliário.'); return false;" class="card__link" style="margin-top: var(--space-4);">
+              Entenda as regras
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <!-- Card 3 -->
+          <div class="card" style="padding: var(--space-6);">
+            <div class="card__icon" style="margin-bottom: var(--space-4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Análise de Crédito</h3>
+            <p class="card__text" style="font-size: var(--text-sm); line-height: 1.5;">Estudo de perfil de renda e capacidade de pagamento para viabilizar e encaminhar a aprovação da linha de crédito ideal junto às instituições financeiras.</p>
+            <a href="#" onclick="openWhatsApp('Olá! Gostaria de fazer uma análise de crédito para meu financiamento.'); return false;" class="card__link" style="margin-top: var(--space-4);">
+              Fazer análise
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <!-- Card 4 -->
+          <div class="card" style="padding: var(--space-6);">
+            <div class="card__icon" style="margin-bottom: var(--space-4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Regularização Documental</h3>
+            <p class="card__text" style="font-size: var(--text-sm); line-height: 1.5;">Análise minuciosa e suporte jurídico completo na documentação dos compradores, vendedores e certidões do imóvel, mitigando riscos de reprovação.</p>
+            <a href="#" onclick="openWhatsApp('Olá! Preciso de ajuda com a regularização documental para um financiamento.'); return false;" class="card__link" style="margin-top: var(--space-4);">
+              Saber mais
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <!-- Card 5 -->
+          <div class="card" style="padding: var(--space-6);">
+            <div class="card__icon" style="margin-bottom: var(--space-4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Assessoria até a Assinatura</h3>
+            <p class="card__text" style="font-size: var(--text-sm); line-height: 1.5;">Acompanhamento integral pós-aprovação do crédito, englobando laudo de engenharia, emissão de contrato pelo banco e orientação até o registro de imóveis.</p>
+            <a href="#" onclick="openWhatsApp('Olá! Gostaria de entender mais sobre a assessoria no processo de financiamento.'); return false;" class="card__link" style="margin-top: var(--space-4);">
+              Entenda as etapas
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <!-- Card 6 -->
+          <div class="card" style="padding: var(--space-6);">
+            <div class="card__icon" style="margin-bottom: var(--space-4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Apoio para Corretores e Imobiliárias</h3>
+            <p class="card__text" style="font-size: var(--text-sm); line-height: 1.5;">Parceria estratégica para agilizar a análise de crédito de seus clientes e a condução dos processos imobiliários, permitindo que você foque em suas vendas.</p>
+            <a href="#" onclick="openWhatsAppParceria(); return false;" class="card__link" style="margin-top: var(--space-4);">
+              Seja nosso parceiro
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         COMO FUNCIONA (Timeline de 8 passos)
+         ============================================================ -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Jornada do Financiamento
+          </span>
+          <h2 class="section__title">Como conduzimos seu financiamento</h2>
+          <p class="section__subtitle">Conheça as etapas do início da simulação até o registro e entrega final do contrato.</p>
+        </div>
+
+        <div class="timeline-8 animate-stagger">
+          <!-- Step 1 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">1</span>
+              <h3 class="timeline-8__title">Simulação</h3>
+            </div>
+            <p class="timeline-8__text">Estudo inicial das condições financeiras e opções de parcelas estimadas.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">2</span>
+              <h3 class="timeline-8__title">Análise de Crédito</h3>
+            </div>
+            <p class="timeline-8__text">Estudo de perfil de renda e submissão aos bancos para emissão da carta de crédito.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">3</span>
+              <h3 class="timeline-8__title">Documentação</h3>
+            </div>
+            <p class="timeline-8__text">Coleta e validação da documentação pessoal dos envolvidos e do imóvel.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">4</span>
+              <h3 class="timeline-8__title">Avaliação do Imóvel</h3>
+            </div>
+            <p class="timeline-8__text">Agendamento e acompanhamento da vistoria técnica da engenharia do banco.</p>
+          </div>
+          <!-- Step 5 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">5</span>
+              <h3 class="timeline-8__title">Aprovação</h3>
+            </div>
+            <p class="timeline-8__text">Análise jurídica e de engenharia concluída e conformidade para emissão do contrato.</p>
+          </div>
+          <!-- Step 6 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">6</span>
+              <h3 class="timeline-8__title">Contrato</h3>
+            </div>
+            <p class="timeline-8__text">Emissão e conferência do instrumento de crédito emitido pela instituição financeira.</p>
+          </div>
+          <!-- Step 7 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">7</span>
+              <h3 class="timeline-8__title">Assinatura</h3>
+            </div>
+            <p class="timeline-8__text">A assinatura formal do contrato de financiamento entre compradores, vendedores e banco.</p>
+          </div>
+          <!-- Step 8 -->
+          <div class="timeline-8__step">
+            <div class="timeline-8__header">
+              <span class="timeline-8__number">8</span>
+              <h3 class="timeline-8__title">Registro e Finalização</h3>
+            </div>
+            <p class="timeline-8__text">Registro do contrato no Cartório de Imóveis competente para liberação dos recursos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SIMULADOR IMOBILIÁRIO (2 COLUNAS)
+         ============================================================ -->
+    <section class="section section--gradient" id="simulador">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+            Simulador de Crédito
+          </span>
+          <h2 class="section__title">Simule seu financiamento</h2>
+          <p class="section__subtitle" style="color: rgba(255,255,255,0.85);">Simulação gratuita e sem compromisso em múltiplos bancos simultaneamente.</p>
+        </div>
+
+        <div class="simulator-pro animate-on-scroll" id="simulator-form">
+          <!-- Left Column: Form -->
+          <div class="simulator-pro__form">
+            <!-- Bank Selection -->
+            <div class="form-group">
+              <label class="form-label" style="font-weight: 700; margin-bottom: var(--space-3);">1. Selecione o banco de preferência</label>
+              <input type="hidden" id="sim-bank" value="caixa">
+              <div class="bank-selector">
+                <div class="bank-card bank-card--selected" data-bank="caixa">
+                  <span class="bank-card__name">Caixa</span>
+                </div>
+                <div class="bank-card" data-bank="itau_uniclass">
+                  <span class="bank-card__name">Itaú Uniclass</span>
+                </div>
+                <div class="bank-card" data-bank="itau_personnalite">
+                  <span class="bank-card__name">Itaú Personnalité</span>
+                </div>
+                <div class="bank-card" data-bank="bradesco_principal">
+                  <span class="bank-card__name">Bradesco Principal</span>
+                </div>
+                <div class="bank-card" data-bank="bradesco_private">
+                  <span class="bank-card__name">Bradesco Private</span>
+                </div>
+                <div class="bank-card" data-bank="santander">
+                  <span class="bank-card__name">Santander</span>
+                </div>
+                <div class="bank-card" data-bank="inter">
+                  <span class="bank-card__name">Banco Inter</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Financial fields -->
+            <div class="form-group">
+              <label class="form-label" style="font-weight: 700; margin-bottom: var(--space-3);">2. Dados da Operação</label>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="sim-property-value">Valor do Imóvel</label>
+                  <div class="form-input-group">
+                    <span class="form-input-group__prefix">R$</span>
+                    <input type="text" class="form-input" id="sim-property-value" data-currency placeholder="0,00" value="400.000,00">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sim-down-payment">Entrada (Recursos Próprios)</label>
+                  <div class="form-input-group">
+                    <span class="form-input-group__prefix">R$</span>
+                    <input type="text" class="form-input" id="sim-down-payment" data-currency placeholder="0,00" value="80.000,00">
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="sim-income">Renda Bruta Familiar Mensal</label>
+                  <div class="form-input-group">
+                    <span class="form-input-group__prefix">R$</span>
+                    <input type="text" class="form-input" id="sim-income" data-currency placeholder="0,00" value="12.000,00">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sim-has-fgts">Possui FGTS para utilizar?</label>
+                  <select class="form-select" id="sim-has-fgts">
+                    <option value="nao" selected>Não</option>
+                    <option value="sim">Sim</option>
+                  </select>
+                </div>
+              </div>
+              <!-- FGTS Value (Hidden initially) -->
+              <div class="form-group" id="fgts-value-group" style="display: none;">
+                <label class="form-label" for="sim-fgts-value">Valor de FGTS disponível</label>
+                <div class="form-input-group">
+                  <span class="form-input-group__prefix">R$</span>
+                  <input type="text" class="form-input" id="sim-fgts-value" data-currency placeholder="0,00" value="">
+                </div>
+              </div>
+            </div>
+
+            <!-- Parameters fields -->
+            <div class="form-group">
+              <label class="form-label" style="font-weight: 700; margin-bottom: var(--space-3);">3. Detalhes e Localidade</label>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="sim-modalidade">Modalidade de Financiamento</label>
+                  <select class="form-select" id="sim-modalidade">
+                    <option value="novo" selected>Imóvel Novo</option>
+                    <option value="usado">Imóvel Usado</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sim-uf">Estado (Localização do Imóvel)</label>
+                  <select class="form-select" id="sim-uf">
+                    <option value="AC">Acre (AC)</option>
+                    <option value="AL">Alagoas (AL)</option>
+                    <option value="AP">Amapá (AP)</option>
+                    <option value="AM">Amazonas (AM)</option>
+                    <option value="BA">Bahia (BA)</option>
+                    <option value="CE">Ceará (CE)</option>
+                    <option value="DF">Distrito Federal (DF)</option>
+                    <option value="ES">Espírito Santo (ES)</option>
+                    <option value="GO">Goiás (GO)</option>
+                    <option value="MA">Maranhão (MA)</option>
+                    <option value="MT">Mato Grosso (MT)</option>
+                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                    <option value="MG">Minas Gerais (MG)</option>
+                    <option value="PA">Pará (PA)</option>
+                    <option value="PB">Paraíba (PB)</option>
+                    <option value="PR">Paraná (PR)</option>
+                    <option value="PE">Pernambuco (PE)</option>
+                    <option value="PI">Piauí (PI)</option>
+                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                    <option value="RN">Rio Grande do Norte (RN)</option>
+                    <option value="RS">Rio Grande do Sul (RS)</option>
+                    <option value="RO">Rondônia (RO)</option>
+                    <option value="RR">Roraima (RR)</option>
+                    <option value="SC">Santa Catarina (SC)</option>
+                    <option value="SP" selected>São Paulo (SP)</option>
+                    <option value="SE">Sergipe (SE)</option>
+                    <option value="TO">Tocantins (TO)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="sim-term">Prazo Pretendido</label>
+                  <select class="form-select" id="sim-term">
+                    <option value="240">240 meses (20 anos)</option>
+                    <option value="300">300 meses (25 anos)</option>
+                    <option value="360" selected>360 meses (30 anos)</option>
+                    <option value="420">420 meses (35 anos)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Sistema de Amortização</label>
+                  <div style="display: flex; gap: var(--space-6); padding-top: var(--space-3);">
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-weight: 500; cursor: pointer; color: var(--color-dark-800);">
+                      <input type="radio" name="sim-amortization" value="SAC" checked style="accent-color: var(--color-primary-500); width: 18px; height: 18px;">
+                      SAC
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-weight: 500; cursor: pointer; color: var(--color-dark-800);">
+                      <input type="radio" name="sim-amortization" value="PRICE" style="accent-color: var(--color-primary-500); width: 18px; height: 18px;">
+                      PRICE
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Auto adjustment warning container -->
+            <div class="simulator-pro__alert simulator-pro__alert--info" id="amort-warning" style="display: none;"></div>
+
+            <button type="submit" class="btn btn--primary btn--lg btn--block btn--pill" id="sim-calculate" style="margin-top: var(--space-4);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Calcular Financiamento
+            </button>
+          </div>
+
+          <!-- Right Column: Result Card -->
+          <div class="simulator-pro__result" id="simulator-result" style="display: none;">
+            <!-- Errors and warnings will render here -->
+            <div id="result-alerts"></div>
+
+            <div class="simulator-pro__result-card" id="result-content">
+              <!-- Content gets injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         POR QUE A GOODCREDIT?
+         ============================================================ -->
+    <section class="section" id="diferenciais">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Diferenciais
+          </span>
+          <h2 class="section__title">Por que fazer seu financiamento com a GoodCredit?</h2>
+        </div>
+        <div class="grid grid--3 animate-stagger">
+          <div class="card card--flat">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="card__title">Assessoria do início ao fim</h3>
+            <p class="card__text">Cuidamos de tudo, desde a análise de crédito inicial e documentação até a assinatura final do contrato.</p>
+          </div>
+          <div class="card card--flat">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h3 class="card__title">Orientação especializada</h3>
+            <p class="card__text">Estudo detalhado do seu perfil para identificar as melhores opções e taxas praticadas pelos bancos.</p>
+          </div>
+          <div class="card card--flat">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="card__title">Agilidade nos trâmites</h3>
+            <p class="card__text">Experiência e relacionamento com os principais bancos para agilizar a emissão de laudos e contratos.</p>
+          </div>
+          <div class="card card--flat">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="card__title">Atendimento consultivo</h3>
+            <p class="card__text">Suporte humanizado focado em tirar dúvidas e dar segurança em todas as decisões do seu financiamento.</p>
+          </div>
+          <div class="card card--flat">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="card__title">Transparência nos processos</h3>
+            <p class="card__text">Clareza sobre custos, tarifas, impostos e seguros obrigatórios, sem surpresas no decorrer do processo.</p>
+          </div>
+          <div class="card card--flat">
+            <div class="card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card__title">Correspondente Caixa Aqui</h3>
+            <p class="card__text">Segurança jurídica assegurada pela nossa atuação credenciada junto à Caixa Econômica Federal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         DEPOIMENTOS (Nomes genéricos comerciais)
+         ============================================================ -->
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Relatos Reais
+          </span>
+          <h2 class="section__title">O que dizem os nossos clientes</h2>
+          <p class="section__subtitle">A satisfação de quem conquistou a casa própria e conta com o suporte especializado da GoodCredit.</p>
+        </div>
+        <div class="grid grid--3 animate-stagger">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__text">"A equipe da GoodCredit descomplicou todo o processo do financiamento. Em menos de 45 dias eu já estava com o meu contrato devidamente registrado!"</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, var(--color-primary-200), var(--color-primary-400));"></div>
+              <div>
+                <div class="testimonial-card__name">Comprador de imóvel</div>
+                <div class="testimonial-card__role">São Paulo, SP</div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__text">"Achei que o processo de documentação e engenharia seria muito difícil de lidar sozinho. A assessoria cuidou de cada detalhe e nos manteve informados do início ao fim."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, var(--color-dark-200), var(--color-dark-400));"></div>
+              <div>
+                <div class="testimonial-card__name">Família atendida</div>
+                <div class="testimonial-card__role">Guarulhos, SP</div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__text">"Sou corretor e passei a enviar as análises de crédito dos meus clientes para eles. O retorno é rápido e a taxa de conversão das minhas vendas aumentou muito."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #E0E7FF, #818CF8);"></div>
+              <div>
+                <div class="testimonial-card__name">Cliente GoodCredit</div>
+                <div class="testimonial-card__role">Campinas, SP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CTA BANNER
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner animate-on-scroll">
+          <div class="cta-banner__bg"></div>
+          <h2 class="cta-banner__title">Pronto para dar o próximo passo?</h2>
+          <p class="cta-banner__subtitle">Fale com a nossa assessoria especializada e encontre as melhores condições para o seu financiamento imobiliário.</p>
+          <div class="btn-group">
+            <a href="#simulador" class="btn btn--white btn--lg btn--pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              Simular financiamento
+            </a>
+            <a href="#" onclick="openWhatsApp(); return false;" class="btn btn--whatsapp btn--lg btn--pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Falar com especialista
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FAQ SECTION
+         ============================================================ -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Perguntas Frequentes
+          </span>
+          <h2 class="section__title">Dúvidas Frequentes</h2>
+        </div>
+        <div class="faq animate-on-scroll">
+          <div class="faq__item faq__item--open">
+            <button class="faq__question" aria-expanded="true">
+              A simulação garante aprovação?
+              <span class="faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Não. A simulação é uma estimativa inicial. A aprovação depende da análise de crédito, validação documental, política do banco e avaliação do imóvel.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Posso usar FGTS no financiamento?
+              <span class="faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Em muitos casos sim, desde que o cliente e o imóvel atendam às regras vigentes para uso do FGTS.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Quanto preciso de entrada?
+              <span class="faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Depende do banco, modalidade, valor do imóvel e perfil do cliente. Em muitos cenários, o financiamento pode chegar a determinado percentual do valor do imóvel, mas a análise precisa confirmar a condição.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              A GoodCredit é banco?
+              <span class="faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Não. A GoodCredit atua como assessoria especializada em crédito imobiliário e correspondente autorizado Caixa Aqui, auxiliando o cliente durante as etapas do financiamento.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              O imóvel também passa por análise?
+              <span class="faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Sim. Além do perfil do cliente, o banco avalia a documentação do imóvel e também pode solicitar avaliação de engenharia.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Vocês atendem corretores e imobiliárias?
+              <span class="faq__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>Sim. A GoodCredit também apoia corretores e imobiliárias na análise de crédito dos clientes e condução dos processos de financiamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="#" class="footer__logo-container">
+            <img src="images/logo-goodcredit-horizontal.png" alt="GoodCredit Financiamentos Imobiliários" class="footer__logo-img">
+          </a>
+          <p class="footer__desc">GoodCredit Crédito Imobiliário — Assessoria especializada em financiamento imobiliário. Correspondente autorizado Caixa Aqui.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/GoodCreditBr" target="_blank" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/goodcreditbr/" target="_blank" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" onclick="openWhatsApp(); return false;" class="footer__social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu Column -->
+        <div>
+          <h4 class="footer__heading">Menu</h4>
+          <nav class="footer__links">
+            <a href="#inicio" class="footer__link">Início</a>
+            <a href="#servicos" class="footer__link">Serviços</a>
+            <a href="#como-funciona" class="footer__link">Como Funciona</a>
+            <a href="#simulador" class="footer__link">Simulador</a>
+            <a href="#depoimentos" class="footer__link">Depoimentos</a>
+            <a href="#faq" class="footer__link">FAQ</a>
+          </nav>
+        </div>
+
+        <!-- Serviços Column -->
+        <div>
+          <h4 class="footer__heading">Serviços</h4>
+          <nav class="footer__links">
+            <a href="#servicos" class="footer__link">Financiamento Imobiliário</a>
+            <a href="#servicos" class="footer__link">Uso de FGTS</a>
+            <a href="#servicos" class="footer__link">Análise de Crédito</a>
+            <a href="#servicos" class="footer__link">Regularização Documental</a>
+            <a href="#servicos" class="footer__link">Assessoria até a Assinatura</a>
+            <a href="#servicos" class="footer__link">Apoio a Corretores</a>
+          </nav>
+        </div>
+
+        <!-- Contato Column -->
+        <div>
+          <h4 class="footer__heading">Contato</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Rua João Alves Pimenta, 873<br>Vila Miriam – São Paulo, SP</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>(11) 91051-0873</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>mariaelisa@goodcredit.com.br</span>
+          </div>
+          <div class="footer__partner">
+            <div class="footer__partner-label">Parceiro autorizado</div>
+            <div style="display: flex; align-items: center; gap: var(--space-3); color: var(--color-dark-400); font-size: var(--text-sm);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span style="font-weight: 600; color: var(--color-dark-300);">Caixa Aqui</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 GoodCredit Crédito Imobiliário. Todos os direitos reservados. CNPJ: 34.258.468/0001-08.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Política de Privacidade</a>
+          <a href="#" class="footer__bottom-link">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       WHATSAPP FAB
+       ============================================================ -->
+  <div class="fab-whatsapp">
+    <span class="fab-whatsapp__tooltip">Fale conosco!</span>
+    <a href="#" onclick="openWhatsApp(); return false;" class="fab-whatsapp__btn" aria-label="Abrir WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/simulator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
