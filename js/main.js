@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initSmoothScroll();
   initSimulatorUI();
+  initHeroParticles();
 });
 
 
@@ -467,3 +468,214 @@ window.openWhatsAppSimulacao = openWhatsAppSimulacao;
 window.openWhatsAppParceria = openWhatsAppParceria;
 window.sendSimToWhatsApp = sendSimToWhatsApp;
 window.runSimulation = runSimulation;
+
+
+/* ─── Particle Grid System (Reusable) ─── */
+function createParticleGrid(container, canvas, options) {
+  if (!container || !canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const cfg = Object.assign({
+    spacing: 32,
+    baseRadius: 1.4,
+    maxRadius: 3.2,
+    baseOpacity: 0.12,
+    maxOpacity: 0.55,
+    influenceRadius: 130,
+    repulsionStrength: 20,
+    returnSpeed: 0.07,
+    colorBase: [255, 255, 255],
+    colorHighlight: [110, 231, 183],
+    interactive: true,         // mouse interaction
+  }, options);
+
+  let particles = [];
+  let mouse = { x: -9999, y: -9999, active: false };
+  let animId = null;
+  let isVisible = true;
+  let dpr = window.devicePixelRatio || 1;
+  let canvasW = 0;
+  let canvasH = 0;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let reducedMotion = prefersReducedMotion.matches;
+  prefersReducedMotion.addEventListener('change', (e) => {
+    reducedMotion = e.matches;
+    if (reducedMotion) {
+      particles.forEach(p => { p.x = p.ox; p.y = p.oy; p.r = cfg.baseRadius; p.opacity = cfg.baseOpacity; });
+      drawStaticFrame();
+    }
+  });
+
+  const isMobileQuery = window.matchMedia('(pointer: coarse)');
+  let isMobile = isMobileQuery.matches;
+  isMobileQuery.addEventListener('change', (e) => { isMobile = e.matches; });
+
+  function createParticles() {
+    particles = [];
+    const cols = Math.floor(canvasW / cfg.spacing);
+    const rows = Math.floor(canvasH / cfg.spacing);
+    if (cols <= 0 || rows <= 0) return;
+    const offsetX = (canvasW - (cols - 1) * cfg.spacing) / 2;
+    const offsetY = (canvasH - (rows - 1) * cfg.spacing) / 2;
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        const ox = offsetX + col * cfg.spacing;
+        const oy = offsetY + row * cfg.spacing;
+        particles.push({ ox, oy, x: ox, y: oy, r: cfg.baseRadius, opacity: cfg.baseOpacity });
+      }
+    }
+  }
+
+  function resize() {
+    const rect = container.getBoundingClientRect();
+    dpr = window.devicePixelRatio || 1;
+    canvasW = rect.width;
+    canvasH = rect.height;
+    canvas.width = canvasW * dpr;
+    canvas.height = canvasH * dpr;
+    canvas.style.width = canvasW + 'px';
+    canvas.style.height = canvasH + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    createParticles();
+    if (reducedMotion) drawStaticFrame();
+  }
+
+  // Mouse tracking (only if interactive)
+  if (cfg.interactive) {
+    container.addEventListener('mousemove', (e) => {
+      if (reducedMotion || isMobile) return;
+      const rect = container.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.active = true;
+    }, { passive: true });
+
+    container.addEventListener('mouseleave', () => {
+      mouse.active = false;
+      mouse.x = -9999;
+      mouse.y = -9999;
+    }, { passive: true });
+  }
+
+  function drawStaticFrame() {
+    ctx.clearRect(0, 0, canvasW, canvasH);
+    const [r, g, b] = cfg.colorBase;
+    const fill = `rgba(${r},${g},${b},${cfg.baseOpacity})`;
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      ctx.beginPath();
+      ctx.arc(p.ox, p.oy, cfg.baseRadius, 0, Math.PI * 2);
+      ctx.fillStyle = fill;
+      ctx.fill();
+    }
+  }
+
+  let ambientTime = 0;
+
+  function animate() {
+    if (!isVisible) { animId = requestAnimationFrame(animate); return; }
+
+    ctx.clearRect(0, 0, canvasW, canvasH);
+    const ir = cfg.influenceRadius;
+    const irSq = ir * ir;
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      let targetR = cfg.baseRadius;
+      let targetOpacity = cfg.baseOpacity;
+      let displaceX = 0;
+      let displaceY = 0;
+
+      if (cfg.interactive && mouse.active && !isMobile) {
+        const dx = p.ox - mouse.x;
+        const dy = p.oy - mouse.y;
+        const distSq = dx * dx + dy * dy;
+        if (distSq < irSq) {
+          const dist = Math.sqrt(distSq);
+          const factor = 1 - (dist / ir);
+          const f3 = factor * factor * factor;
+          if (dist > 0.1) {
+            const angle = Math.atan2(dy, dx);
+            displaceX = Math.cos(angle) * cfg.repulsionStrength * f3;
+            displaceY = Math.sin(angle) * cfg.repulsionStrength * f3;
+          }
+          targetR = cfg.baseRadius + (cfg.maxRadius - cfg.baseRadius) * f3;
+          targetOpacity = cfg.baseOpacity + (cfg.maxOpacity - cfg.baseOpacity) * f3;
+        }
+      } else if (isMobile && !reducedMotion) {
+        const wave = Math.sin(ambientTime * 0.6 + p.ox * 0.008 + p.oy * 0.006) * 0.5 + 0.5;
+        targetOpacity = cfg.baseOpacity + wave * 0.06;
+      }
+
+      const targetX = p.ox + displaceX;
+      const targetY = p.oy + displaceY;
+      p.x += (targetX - p.x) * cfg.returnSpeed;
+      p.y += (targetY - p.y) * cfg.returnSpeed;
+      p.r += (targetR - p.r) * cfg.returnSpeed;
+      p.opacity += (targetOpacity - p.opacity) * cfg.returnSpeed;
+
+      let cr, cg, cb;
+      if (cfg.interactive && mouse.active && !isMobile) {
+        const dx2 = p.x - mouse.x;
+        const dy2 = p.y - mouse.y;
+        const d2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+        const bl = Math.max(0, 1 - d2 / ir);
+        const bl2 = bl * bl;
+        cr = Math.round(cfg.colorBase[0] + (cfg.colorHighlight[0] - cfg.colorBase[0]) * bl2);
+        cg = Math.round(cfg.colorBase[1] + (cfg.colorHighlight[1] - cfg.colorBase[1]) * bl2);
+        cb = Math.round(cfg.colorBase[2] + (cfg.colorHighlight[2] - cfg.colorBase[2]) * bl2);
+      } else {
+        cr = cfg.colorBase[0];
+        cg = cfg.colorBase[1];
+        cb = cfg.colorBase[2];
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${cr},${cg},${cb},${p.opacity})`;
+      ctx.fill();
+    }
+
+    ambientTime += 0.016;
+    animId = requestAnimationFrame(animate);
+  }
+
+  const visObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { isVisible = entry.isIntersecting; });
+  }, { threshold: 0 });
+  visObserver.observe(container);
+
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 150);
+  }, { passive: true });
+
+  resize();
+  if (reducedMotion) {
+    drawStaticFrame();
+  } else {
+    animId = requestAnimationFrame(animate);
+  }
+}
+
+
+/* ─── Initialize Particle Grids ─── */
+function initHeroParticles() {
+  // Hero — full interactive particle background
+  createParticleGrid(
+    document.querySelector('.hero'),
+    document.querySelector('.hero__particle-canvas'),
+    { interactive: true }
+  );
+
+  // Simulator section — static/ambient particle background (no mouse interaction)
+  createParticleGrid(
+    document.querySelector('#simulador'),
+    document.querySelector('.section__particle-canvas'),
+    { interactive: true, baseOpacity: 0.10, spacing: 34 }
+  );
+}
+
